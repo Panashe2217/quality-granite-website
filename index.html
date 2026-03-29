@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Granites</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        
+        <!-- Logo / Brand -->
+        <div class="logo">
+            <span class="logo-text">Quality Granites</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="work.html">Our Work</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </div>
+</nav>
+
+<header class="hero" id="home">
+    <img src="images/hero.jpg" class="hero-bg">
+
+    <div class="hero-card reveal">
+        <h5>QUALITY GRANITES</h5>
+        <h1>A Gentle Way to Remember and Celebrate Life</h1>
+        <p>Thoughtfully designed memorials that reflect love, legacy, and remembrance</p>
+        <a href="#contact" class="hero-link">Get in touch →</a>
+    </div>
+</header>
+
+<main>
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Our Services</h2>
+
+            <div class="grid">
+                <article class="glass card reveal">
+                    <img src="images/tomb1.jpg" alt="Tombstone">
+                    <div class="card-body">
+                        <h3>Tombstones</h3>
+                        <p>We design and install high-quality granite tombstones with care and precision.</p>
+                        <div class="price">From $250</div>
+                    </div>
+                </article>
+
+                <article class="glass card reveal">
+                    <img src="images/kitchen1.jpg" alt="Granite kitchen top">
+                    <div class="card-body">
+                        <h3>Granite Kitchen Tops</h3>
+                        <p>Durable, elegant granite kitchen tops for a modern, long-lasting finish.</p>
+                        <div class="price">From $600</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="welcome" class="section">
+        <div class="container">
+            <div class="glass block reveal">
+                <h2>Welcome</h2>
+                <p>
+                    With over 10 years of experience, Quality Granites provides handcrafted tombstones and premium granite kitchen tops. We source the finest materials and treat every project - whether a memorial or a home renovation - with the same dedication to quality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Why Choose Us</h2>
+
+            <div class="why-grid">
+                <article class="glass why-card reveal">
+                    <div class="why-icon" aria-hidden="true"></div>
+                    <h3>Premium Quality Granite</h3>
+                    <p>
+                        We source only the highest-grade granite from trusted suppliers, ensuring durability, beauty, and lasting value for every project.
+                    </p>
+                </article>
+
+                <article class="glass why-card reveal">
+                    <div class="why-icon" aria-hidden="true"></div>
+                    <h3>Skilled Craftsmanship</h3>
+                    <p>
+                        Every tombstone and kitchen top is hand-finished by experienced artisans who take pride in precision and attention to detail.
+                    </p>
+                </article>
+
+                <article class="glass why-card reveal">
+                    <div class="why-icon" aria-hidden="true"></div>
+                    <h3>Compassionate Service</h3>
+                    <p>
+                        We understand the sensitivity of memorial work. Our team treats every family with respect, patience, and genuine care.
+                    </p>
+                </article>
+
+                <article class="glass why-card reveal">
+                    <div class="why-icon" aria-hidden="true"></div>
+                    <h3>Reliable Turnaround</h3>
+                    <p>
+                        We respect your time and deadlines. From consultation to installation, we communicate clearly and deliver on schedule.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="glass block reveal">
+                <h2>About Us</h2>
+                <p>
+                    Quality Granites specializes in designing and installing durable and elegant tombstones.
+                    We are committed to honoring your loved ones with respect, craftsmanship, and attention to detail.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+    <div class="container">
+        <!-- Contact Card with Background -->
+        <div class="contact-card glass block reveal">
+            <h2>Contact Us</h2>
+            <p>Reach us directly for quotes, designs, and installation inquiries.</p>
+
+            <div class="contact-list">
+                <div class="contact-item"><strong>Phone:</strong> +263 77 684 8616</div>
+                <div class="contact-item"><strong>Email:</strong> qualitygranitegweru@gmail.com</div>
+                <div class="contact-item"><strong>Address:</strong> 26 Smart Road, Athlone, Gweru, Zimbabwe</div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button class="btn" type="submit">Send Message</button>
+                <p id="message" class="form-message" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <section id="cta" class="section">
+        <div class="container">
+            <div class="cta-banner reveal">
+                <h2 class="cta-title">Ready to Create Something Lasting?</h2>
+                <a class="btn cta-btn" href="index.html#contact">Contact Us Today</a>
+                <p class="cta-small">Free quotes. No obligation. Just honest advice.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Quality Granites. All rights reserved.</p>
+</footer>
+
+<script>
+// Subtle scroll animations (adds "in-view" when elements enter viewport)
+function handleSubmit(event) {
+    event.preventDefault();
+    alert("Thank you! Your message has been received.");
+}
+
+const revealEls = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.12 }
+);
+
+revealEls.forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>

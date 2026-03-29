@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Quality Granites | Premium Tombstones & Granite Kitchen Tops</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="container nav-inner">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="work.html">Our Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero work-hero">
+    <img src="images/work.jpg" class="hero-bg">
+
+    <div class="hero-card reveal">
+        <h5>OUR PORTFOLIO</h5>
+        <h1>Craftsmanship That Speaks for Itself</h1>
+        <p>Explore our finest granite work — from meaningful memorials to stunning kitchen surfaces.</p>
+        <a class="hero-link" href="index.html#contact">Request a Quote →</a>
+    </div>
+</header>
+
+<main>
+    <!-- Tombstones Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Tombstones</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Honoring memories with timeless elegance</p>
+
+            <div class="grid">
+                <article class="glass card reveal">
+                    <img src="images/tomb2.jpg" alt="Elegant black granite tombstone">
+                    <div class="card-body">
+                        <h3>Flat cover</h3>
+                        <p>Polished finish with custom engraving. Dignified and timeless.</p>
+                        <div class="price">From $450</div>
+                    </div>
+                </article>
+
+                <article class="glass card reveal">
+                    <img src="images/tomb3.jpg" alt="Gray granite tombstone with floral design">
+                    <div class="card-body">
+                        <h3>Classic Black Granite</h3>
+                        <p>Subtle texture with intricate detailing. Lasting clarity.</p>
+                        <div class="price">From $670</div>
+                    </div>
+                </article>
+
+                <article class="glass card reveal">
+                    <img src="images/tomb4.jpg" alt="Double headstone with gold engraving">
+                    <div class="card-body">
+                        <h3>Double Deck</h3>
+                        <p>Elegant design for couples. Gold-leaf engraving available.</p>
+                        <div class="price">From $1200</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitchen Tops Section -->
+    <section class="section" style="background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2 class="section-title reveal">Granite Kitchen Tops</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Durable elegance for your home</p>
+
+            <div class="grid">
+                <article class="glass card reveal">
+                    <img src="images/kitchen1.jpg" alt="White granite kitchen countertop">
+                    <div class="card-body">
+                        <h3>White Ice Granite</h3>
+                        <p>Bright, modern finish. Stain-resistant and durable.</p>
+                        <div class="price">From $600</div>
+                    </div>
+                </article>
+
+                <article class="glass card reveal">
+                    <img src="images/kitchen2.jpg" alt="Black galaxy granite kitchen island">
+                    <div class="card-body">
+                        <h3>Black Galaxy</h3>
+                        <p>Premium finish with natural gold flecks. Perfect for islands.</p>
+                        <div class="price">From $800</div>
+                    </div>
+                </article>
+
+                <article class="glass card reveal">
+                    <img src="images/kitchen3.jpg" alt="Brown fantasy granite with waterfall edge">
+                    <div class="card-body">
+                        <h3>Brown Fantasy</h3>
+                        <p>Unique veining with waterfall edge option. Luxury finish.</p>
+                        <div class="price">From $950</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-banner reveal">
+                <h2 class="cta-title">Ready to Create Something Lasting?</h2>
+                <a class="btn cta-btn" href="index.html#contact">Contact Us Today</a>
+                <p class="cta-small">Free quotes. No obligation. Just honest advice.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Quality Granites. All rights reserved. | Quality craftsmanship for generations</p>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.12 }
+);
+
+revealEls.forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>

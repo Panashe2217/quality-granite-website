@@ -24,6 +24,7 @@
             <a href="work.html">Our Work</a>
             <a href="index.html#about">About</a>
             <a href="index.html#contact">Contact</a>
+  <a href="https://www.facebook.com/profile.php?id=61575744384552" target="_blank" rel="noopener noreferrer">📘 FACEBOOK</a>
         </div>
 
     </div>
@@ -130,7 +131,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+<section id="contact" class="section">
     <div class="container">
         <!-- Contact Card with Background -->
         <div class="contact-card glass block reveal">
@@ -138,21 +139,38 @@
             <p>Reach us directly for quotes, designs, and installation inquiries.</p>
 
             <div class="contact-list">
-                <div class="contact-item"><strong>Phone:</strong> +263 77 684 8616</div>
+                <div class="contact-item"><strong>Phone:</strong> +263 77 684 8616 // +263 78 168 1722</div>
                 <div class="contact-item"><strong>Email:</strong> qualitygranitegweru@gmail.com</div>
-                <div class="contact-item"><strong>Address:</strong> 26 Smart Road, Athlone, Gweru, Zimbabwe</div>
+                <div class="contact-item"><strong>Address:</strong> Railway Crossing, Opposite Carpet & Tiles Gweru CBD, Zimbabwe</div>
+                <div class="contact-item"><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61575744384552" target="_blank" rel="noopener noreferrer" style="color: #a68b5c; text-decoration: none;">Like us on Facebook →</a></div>
             </div>
 
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button class="btn" type="submit">Send Message</button>
-                <p id="message" class="form-message" aria-live="polite"></p>
+            <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+                <input type="text" id="whatsapp-name" placeholder="Your Name" required>
+                <input type="email" id="whatsapp-email" placeholder="Your Email" required>
+                <textarea id="whatsapp-message" placeholder="Your Message" required></textarea>
+                <button class="btn" type="submit">Send via WhatsApp →</button>
             </form>
         </div>
     </div>
 </section>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    let name = document.getElementById('whatsapp-name').value;
+    let email = document.getElementById('whatsapp-email').value;
+    let message = document.getElementById('whatsapp-message').value;
+    
+    let whatsappMessage = `Hello Quality Granites!%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Message:* ${encodeURIComponent(message)}`;
+    
+    // Your WhatsApp number (Zimbabwe format - no + sign)
+    let phoneNumber = "263776848616";
+    
+    window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
+}
+</script>
 
     <section id="cta" class="section">
         <div class="container">

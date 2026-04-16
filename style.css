@@ -98,38 +98,13 @@ body::before {
     margin: 0 auto;
 }
 
-/* ===== MODERN NAVIGATION ===== */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(253, 248, 240, 0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(198, 124, 78, 0.2);
-    transition: all 0.3s ease;
-}
-
-.nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    padding: 1rem 0;
-    flex-wrap: wrap;
-}
-
-/* NAV LINKS VISIBILITY FIX */
-nav a {
+/* Nav links - GOLD COLOR FORCED */
+.nav-links a {
+    margin-left: 25px;
     text-decoration: none;
-    color: #2c2c2c; /* dark gray text for visibility */
+    color: #a68b5c !important; /* GOLD - FORCED with important */
     font-weight: 500;
-    font-size: var(--text-sm);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a::after {
@@ -139,16 +114,21 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent); /* gold underline on hover */
+    background: #a68b5c; /* gold underline */
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--accent); /* gold accent on hover */
+    color: #c67c4e !important; /* darker gold on hover - FORCED */
 }
 
 nav a:hover::after {
     width: 100%;
+}
+nav .nav-links a,
+nav a.nav-link,
+.nav-links a {
+    color: #a68b5c !important;
 }
 /* Hero Section */
 .hero {
@@ -163,7 +143,7 @@ nav a:hover::after {
     padding-left: 60px;
 }
 
-/* 🔥 NEW: Real image instead of background */
+/* 🔥 NEW: Real image instead of background - MOBILE FRIENDLY */
 .hero-bg {
     position: absolute;
     top: 0;
@@ -172,7 +152,22 @@ nav a:hover::after {
     height: 100%;
 
     object-fit: cover; /* keeps image sharp */
+    object-position: center center; /* centers the image */
     z-index: 0;
+}
+
+/* Mobile fix for hero background image */
+@media (max-width: 768px) {
+    .hero-bg {
+        object-fit: cover;
+        object-position: 70% center; /* shifts focus to avoid cropping important parts */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-bg {
+        object-position: 75% center; /* further adjustment for small screens */
+    }
 }
 
 /* REMOVE this completely */
